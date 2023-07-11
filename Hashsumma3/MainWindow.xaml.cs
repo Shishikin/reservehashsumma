@@ -61,9 +61,10 @@ namespace Hashsumma3
 //                                                   MessageBox.Show(numberfiles.ToString());            
             for (var i = 0; i < task.Length; i++)
             {
+                var k = searchfiles[i];
                 task[i] = new Task(() =>
                 {
-                    Hashsumma(searchfiles[i]);
+                    Hashsumma(k);
                 });
             }
  //                                                   MessageBox.Show("hello");
