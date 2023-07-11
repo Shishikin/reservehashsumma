@@ -17,13 +17,14 @@ using System.Windows.Shapes;
 using System.IO;
 using System.Threading;
 using System.Reflection;
+using MahApps.Metro.Controls;
 
 namespace Hashsumma3
 {
     /// <summary>
     /// Логика взаимодействия для MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainWindow : MetroWindow
     {
         public MainWindow()
         {
@@ -58,8 +59,9 @@ namespace Hashsumma3
         }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            
             //число файлов
-            int numberfiles = 4;
+            int numberfiles = (int) numberfile.Value;
             // массив путей к каждому файлу
             string[] searchfiles = new string[numberfiles];
             //число потоков равно числу файлов
@@ -90,5 +92,7 @@ namespace Hashsumma3
                 );
             }            
         }
+
+        //HorizontalAlignment="Center" Height="55" Margin="0,263,0,0" VerticalAlignment="Top" Width="120"
     }
 }

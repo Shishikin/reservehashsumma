@@ -14,3 +14,15 @@ C:\visial studio\Hashsumma3\Hashsumma3\obj\Debug\Hashsumma3.csproj.GenerateResou
 C:\visial studio\Hashsumma3\Hashsumma3\obj\Debug\Hashsumma3.csproj.CoreCompileInputs.cache
 C:\visial studio\Hashsumma3\Hashsumma3\obj\Debug\Hashsumma3.exe
 C:\visial studio\Hashsumma3\Hashsumma3\obj\Debug\Hashsumma3.pdb
+C:\visial studio\Hashsumma3\Hashsumma3\bin\Debug\ControlzEx.dll
+C:\visial studio\Hashsumma3\Hashsumma3\bin\Debug\MahApps.Metro.dll
+C:\visial studio\Hashsumma3\Hashsumma3\bin\Debug\Microsoft.Xaml.Behaviors.dll
+C:\visial studio\Hashsumma3\Hashsumma3\bin\Debug\ControlzEx.pdb
+C:\visial studio\Hashsumma3\Hashsumma3\bin\Debug\ControlzEx.xml
+C:\visial studio\Hashsumma3\Hashsumma3\bin\Debug\MahApps.Metro.pdb
+C:\visial studio\Hashsumma3\Hashsumma3\bin\Debug\MahApps.Metro.xml
+C:\visial studio\Hashsumma3\Hashsumma3\bin\Debug\Microsoft.Xaml.Behaviors.pdb
+C:\visial studio\Hashsumma3\Hashsumma3\bin\Debug\Microsoft.Xaml.Behaviors.xml
+C:\visial studio\Hashsumma3\Hashsumma3\bin\Debug\de\MahApps.Metro.resources.dll
+C:\visial studio\Hashsumma3\Hashsumma3\obj\Debug\Hashsumma3.csproj.CopyComplete
+C:\visial studio\Hashsumma3\Hashsumma3\obj\Debug\App.baml
