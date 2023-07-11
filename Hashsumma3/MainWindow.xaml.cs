@@ -28,15 +28,36 @@ namespace Hashsumma3
         public MainWindow()
         {
             InitializeComponent();
+        }        
+
+        /// функция для подсчёта хэшсуммы файла        
+        async Task<byte[]> HashsumAsync(string file)
+        {
+            const int BUFFER_SIZE = 16 * 1024 * 1024;
+            using (MD5 md5 = MD5.Create())
+            {
+                using (FileStream fs = new FileStream
+                    (
+                    file, FileMode.Open, FileAccess.Read,
+                    FileShare.Read, BUFFER_SIZE, FileOptions.Asynchronous
+                    )
+                    )
+                {
+                    byte[] buffer = new byte[BUFFER_SIZE];
+
+                    int shift;
+                    while ((shift = await fs.ReadAsync(buffer, 0, buffer.Length)) != 0)
+                    {
+                        md5.TransformBlock(buffer, 0, shift, buffer, 0);
+                    }
+                    md5.TransformFinalBlock(buffer, 0, shift);
+
+                    return md5.Hash;
+                }
+            }
         }
-        
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            void Hashsumma(string search)
-            {
-                var md5 = MD5.Create().ComputeHash(File.ReadAllBytes(search));                                                                              
-                MessageBox.Show(search + '\n' + BitConverter.ToString(md5));                                                                              
-            }
             //число файлов
             int numberfiles = 4;
             // массив путей к каждому файлу
@@ -58,22 +79,16 @@ namespace Hashsumma3
             }
             //создание массива потоков
             Task[] task = new Task[numberTask];
-//                                                   MessageBox.Show(numberfiles.ToString());            
             for (var i = 0; i < task.Length; i++)
             {
                 var k = searchfiles[i];
-                task[i] = new Task(() =>
+                Task.Run(async () =>
                 {
-                    Hashsumma(k);
-                });
-            }
- //                                                   MessageBox.Show("hello");
-            //запуск потоков
-            for (var i = 0; i < task.Length; i++)
-            {
-                task[i].Start();
-            }
-            //           MessageBox.Show("good");
+                    byte[] hash;
+                    MessageBox.Show(k + '\n' + BitConverter.ToString(await HashsumAsync(k)));
+                }
+                );
+            }            
         }
     }
 }
