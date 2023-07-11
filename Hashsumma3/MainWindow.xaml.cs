@@ -15,6 +15,9 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.IO;
+using System.Threading;
+using System.Reflection;
+
 namespace Hashsumma3
 {
     /// <summary>
@@ -37,8 +40,8 @@ namespace Hashsumma3
                                                                               
                 //MessageBox.Show(BitConverter.ToString(md5));
             }
-            int numberfiles = 4+1;
-            string[] searchfiles = new string[numberfiles+1];
+            int numberfiles = 4;
+            string[] searchfiles = new string[numberfiles];
             int numberTask = 4;
             {
                 int counter = 0;
@@ -52,16 +55,21 @@ namespace Hashsumma3
                     counter++;
                 }
             }
-            Task[] task = new Task[numberTask+1];
+            Task[] task = new Task[numberTask];
             MessageBox.Show(numberfiles.ToString());
-
-            for (int i = 0; i < numberfiles-1; i++)
+            for (var i = 0; i < task.Length; i++)
             {
-                //               MessageBox.Show(i.ToString());
-                task[i] = new Task(() => Hashsumma(searchfiles[i]));
-                task[i].Start();
-                //               MessageBox.Show(i.ToString());                
+                task[i] = new Task(() =>
+                {
+                    Hashsumma(searchfiles[i]);
+                });
             }
+ //           MessageBox.Show("hello");
+            for (var i = 0; i < task.Length; i++)
+            {
+                task[i].Start();
+            }
+            //           MessageBox.Show("good");
         }
     }
 }
