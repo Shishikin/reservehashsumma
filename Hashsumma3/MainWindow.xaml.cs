@@ -36,13 +36,14 @@ namespace Hashsumma3
             {
                 var md5 = MD5.Create().ComputeHash(File.ReadAllBytes(search));                                                                              
                 MessageBox.Show(BitConverter.ToString(md5));                                                                              
-                //var md5 = MD5.Create().ComputeHash(File.ReadAllBytes(search));//(File.ReadAllBytes(dialog.FileName));
-                                                                              
-                //MessageBox.Show(BitConverter.ToString(md5));
             }
+            //число файлов
             int numberfiles = 4;
+            // массив путей к каждому файлу
             string[] searchfiles = new string[numberfiles];
+            //число потоков на данном этапе равно числу файлов
             int numberTask = 4;
+            //заполнение массива путей к файлам
             {
                 int counter = 0;
                 while (counter < numberfiles)
@@ -55,8 +56,9 @@ namespace Hashsumma3
                     counter++;
                 }
             }
+            //создание массива потоков
             Task[] task = new Task[numberTask];
-            MessageBox.Show(numberfiles.ToString());
+//                                                   MessageBox.Show(numberfiles.ToString());            
             for (var i = 0; i < task.Length; i++)
             {
                 task[i] = new Task(() =>
@@ -64,7 +66,8 @@ namespace Hashsumma3
                     Hashsumma(searchfiles[i]);
                 });
             }
- //           MessageBox.Show("hello");
+ //                                                   MessageBox.Show("hello");
+            //запуск потоков
             for (var i = 0; i < task.Length; i++)
             {
                 task[i].Start();
