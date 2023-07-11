@@ -35,14 +35,14 @@ namespace Hashsumma3
             void Hashsumma(string search)
             {
                 var md5 = MD5.Create().ComputeHash(File.ReadAllBytes(search));                                                                              
-                MessageBox.Show(BitConverter.ToString(md5));                                                                              
+                MessageBox.Show(search + '\n' + BitConverter.ToString(md5));                                                                              
             }
             //число файлов
             int numberfiles = 4;
             // массив путей к каждому файлу
             string[] searchfiles = new string[numberfiles];
-            //число потоков на данном этапе равно числу файлов
-            int numberTask = 4;
+            //число потоков равно числу файлов
+            int numberTask = numberfiles;
             //заполнение массива путей к файлам
             {
                 int counter = 0;
