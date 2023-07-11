@@ -1,0 +1,16 @@
+C:\visial studio\Hashsumma3\Hashsumma3\bin\Debug\Hashsumma3.exe.config
+C:\visial studio\Hashsumma3\Hashsumma3\bin\Debug\Hashsumma3.exe
+C:\visial studio\Hashsumma3\Hashsumma3\bin\Debug\Hashsumma3.pdb
+C:\visial studio\Hashsumma3\Hashsumma3\obj\Debug\Hashsumma3.csproj.AssemblyReference.cache
+C:\visial studio\Hashsumma3\Hashsumma3\obj\Debug\Hashsumma3.csproj.SuggestedBindingRedirects.cache
+C:\visial studio\Hashsumma3\Hashsumma3\obj\Debug\MainWindow.g.cs
+C:\visial studio\Hashsumma3\Hashsumma3\obj\Debug\App.g.cs
+C:\visial studio\Hashsumma3\Hashsumma3\obj\Debug\Hashsumma3_MarkupCompile.cache
+C:\visial studio\Hashsumma3\Hashsumma3\obj\Debug\Hashsumma3_MarkupCompile.lref
+C:\visial studio\Hashsumma3\Hashsumma3\obj\Debug\MainWindow.baml
+C:\visial studio\Hashsumma3\Hashsumma3\obj\Debug\Hashsumma3.g.resources
+C:\visial studio\Hashsumma3\Hashsumma3\obj\Debug\Hashsumma3.Properties.Resources.resources
+C:\visial studio\Hashsumma3\Hashsumma3\obj\Debug\Hashsumma3.csproj.GenerateResource.cache
+C:\visial studio\Hashsumma3\Hashsumma3\obj\Debug\Hashsumma3.csproj.CoreCompileInputs.cache
+C:\visial studio\Hashsumma3\Hashsumma3\obj\Debug\Hashsumma3.exe
+C:\visial studio\Hashsumma3\Hashsumma3\obj\Debug\Hashsumma3.pdb
